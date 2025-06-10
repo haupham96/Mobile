@@ -39,7 +39,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Them logo ben trai edit text -->
     <EditText
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="5dp"
+        android:hint="Tai khoan"
+        android:textColorHint="#ccc"
+        android:textSize="20sp"
         android:id="@+id/editTextText2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -48,7 +54,6 @@
         android:layout_marginEnd="50dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Tai khoan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

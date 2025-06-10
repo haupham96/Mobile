@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     Button button;
+    EditText username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView7);
         button = findViewById(R.id.button);
+        username = findViewById(R.id.editTextText2);
 
         button.setOnClickListener(view -> {
-            textView.setText("Hello World Hihi");
+            String content = username.getText().toString();
+            Toast.makeText(getApplicationContext(), content, Toast.LENGTH_LONG).show();
+            textView.setText(content);
         });
     }
 }
