@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         textView = findViewById(R.id.textView7);
-        textView.setText("Hello World Hihi");
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(view -> {
+            textView.setText("Hello World Hihi");
+        });
     }
 }
