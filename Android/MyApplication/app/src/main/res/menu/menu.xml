@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuSetting"
+        android:title="Setting"
+        android:icon="@drawable/icon_user"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/menuShare" android:title="Share" android:orderInCategory="1" />
+    <item android:id="@+id/menuSearch" android:title="Search" android:orderInCategory="2"/>
+    <item android:id="@+id/menuEdit" android:title="Edit" android:orderInCategory="3"/>
+
+</menu>

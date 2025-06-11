@@ -9,6 +9,21 @@
     android:layout_height="match_parent">
 
     <!-- textAllCaps: viết hoa toàn bộ text -->
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Hehe"
+        android:background="#7E57C2"
+
+        app:titleTextColor="#fff"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.Toolbar>
+
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
