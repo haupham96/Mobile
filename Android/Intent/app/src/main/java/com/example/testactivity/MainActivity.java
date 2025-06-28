@@ -1,11 +1,15 @@
 package com.example.testactivity;
 
+import android.app.ComponentCaller;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -39,5 +43,10 @@ public class MainActivity extends AppCompatActivity {
             intent.setData(Uri.parse("https://www.google.com/"));
             startActivity(intent);
         });
+
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
+        Log.i("MainActivity", "username: " + username + " / Password: " + password);
     }
 }
