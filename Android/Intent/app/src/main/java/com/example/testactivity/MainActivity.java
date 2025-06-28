@@ -1,15 +1,11 @@
 package com.example.testactivity;
 
-import android.app.ComponentCaller;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button button;
-    Button buttonGoogle;
+    Button buttonOtherView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        buttonGoogle = findViewById(R.id.btnGoogle);
-        buttonGoogle.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://www.google.com/"));
+        buttonOtherView = findViewById(R.id.btnOtherView);
+        buttonOtherView.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, GridView.class);
             startActivity(intent);
         });
 
